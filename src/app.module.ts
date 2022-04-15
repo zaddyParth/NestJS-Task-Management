@@ -39,12 +39,4 @@ import { configValidationSchema } from './config.schema';
     AuthModule,
   ],
 })
-export class AppModule {
-  constructor(configService: ConfigService) {
-    console.log('DB_HOST', configService.get('DB_HOST'));
-    console.log('DB_PORT', configService.get('DB_PORT'));
-    console.log('DB_USERNAME', configService.get('DB_USERNAME'));
-    console.log('DB_PASSWORD', configService.get('DB_PASSWORD'));
-    console.log('DB_DATABASE', configService.get('DB_DATABASE'));
-  }
-}
+export class AppModule {}
