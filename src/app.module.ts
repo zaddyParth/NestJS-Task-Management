@@ -21,7 +21,9 @@ import { configValidationSchema } from './config.schema';
         return {
           ssl: isProduction,
           extra: {
-            ssl: isProduction ? { rejectUnauthorised: false } : null,
+            ssl: {
+              rejectUnauthorized: false,
+            },
           },
           type: 'postgres',
           autoLoadEntities: true,
